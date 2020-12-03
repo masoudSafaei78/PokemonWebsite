@@ -1,6 +1,6 @@
+
 import { createMuiTheme } from '@material-ui/core/styles';
-import purple from '@material-ui/core/colors/purple';
-import green from '@material-ui/core/colors/green';
+
 
 const theme = createMuiTheme({
   palette: {
@@ -15,5 +15,12 @@ const theme = createMuiTheme({
     //   #DAF7A6
     },
   },
+  typography:{
+    body1:{
+      fontSize:"15px",
+      // color:theme.palette.secondary.main
+    }
+  },
+
 });
 export default theme;

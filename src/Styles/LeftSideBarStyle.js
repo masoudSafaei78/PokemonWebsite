@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     },
     drawerPaper: {
         background:theme.palette.primary.main,
-      width: drawerWidth,
+      // width: drawerWidth,
       color:theme.palette.secondary.main,
       marginTop:"10vh"
     },
