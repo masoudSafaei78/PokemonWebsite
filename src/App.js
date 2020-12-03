@@ -13,7 +13,7 @@ import Test2 from '../src/Components/test2'
 // import ResponsiveDrawer from './Components/Test';
 function App() {
   return (
-    <div style={{margin:"50px"}} className="App">
+    <div  className="App">
     
     
     <Layout/>

@@ -1,6 +1,6 @@
 import React from 'react'
 import FavoriteIcon from '@material-ui/icons/Favorite';
-import '../Styles/test2.scss';
+import '../Styles/PokemonCardStyle.scss';
 import { ButtonBase } from '@material-ui/core';
 import Snackbar from '@material-ui/core/Snackbar';
 import MuiAlert from '@material-ui/lab/Alert';
@@ -27,7 +27,7 @@ function PokemonCard({ pid, pname, ptype1, ptype2, ptotal, pAttack, pDefense, pS
   };
   return (
     <div class="artboard" onClick={handleClick}>
-      {open? <Snackbar bodyStyle={{ backgroundColor: 'teal', color: 'coral' }} open={open} autoHideDuration={6000} onClose={handleClose}>
+      {open? <Snackbar bodyStyle={{ backgroundColor: 'teal', color: 'coral' }} open={open} autoHideDuration={4000} onClose={handleClose}>
         <Alert  onClose={handleClose} severity="success">
           <text style={{fontSize:"15px"}}> Added to favorites</text>
          
@@ -69,9 +69,11 @@ function PokemonCard({ pid, pname, ptype1, ptype2, ptotal, pAttack, pDefense, pS
             <ul>
 
               <li>Types:
-              <p>{ptype1},{ptype2}</p> 
+              {ptype2!=null?<p>{ptype1},{ptype2}</p>:<p>{ptype1}</p>}
+              
+              {/* <p>{ptype1},{ptype2}</p>  */}
               </li>
-              <li>Totoal:{ptotal}</li>
+              <li>Total:{ptotal}</li>
               <li>Attack:{pAttack}</li>
               <li>Defense:{pDefense}</li>
               <li>Speed:{pSpeed}</li>
@@ -85,7 +87,7 @@ function PokemonCard({ pid, pname, ptype1, ptype2, ptotal, pAttack, pDefense, pS
         <div class="card__side card__side--front">
           <div class="card__theme">
             <div class="card__theme-box">
-              <p class="card__subject">Web Developer</p>
+              <p class="card__subject">Bowerlas</p>
               <p class="card__subject">{pid}</p>
               <p class="card__title">{pname}</p>
               {/* <p><FavoriteIcon fontSize="large"/></p> */}
