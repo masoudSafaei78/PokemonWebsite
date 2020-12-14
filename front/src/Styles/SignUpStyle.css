@@ -14,7 +14,7 @@ button:focus {
 }
 
 ::-webkit-input-placeholder {
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba(74, 6, 83, 0.65);
 }
 
 ::-webkit-input-placeholder .input-line:focus +::input-placeholder {
@@ -22,14 +22,14 @@ button:focus {
 }
 
 .highlight {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(47, 11, 71, 0.575);
   font-weight: 400;
   cursor: pointer;
   transition: color .2s ease;
 }
 
 .highlight:hover {
-  color: #fff;
+  color:#1e0b36;
   transition: color .2s ease;
 }
 
@@ -42,7 +42,7 @@ button:focus {
   font-weight: 300;
   text-align: center;
   margin-top: 10px;
-  color: rgba(255, 255, 255, 0.65)
+  color: rgba(74, 9, 80, 0.493)
 }
 
 .input-line:focus {
@@ -57,7 +57,7 @@ button:focus {
   background: none;
   border: 1px solid rgba(255, 255, 255, 0.65);
   border-radius: 25px;
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba(38, 4, 46, 0.65);
   -webkit-align-self: flex-end;
   -ms-flex-item-align: end;
   align-self: flex-end;
@@ -74,7 +74,7 @@ button:focus {
 
 .ghost-round:hover {
   background: rgba(255, 255, 255, 0.15);
-  color: #fff;
+  color: rgb(35, 7, 44);
   -webkit-transition: all .2s ease;
   transition: all .2s ease;
 }
@@ -116,7 +116,7 @@ button:focus {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  background: #eee;
+  background: rgb(35, 5, 44);
   height: 100%;
 }
 
@@ -159,7 +159,7 @@ button:focus {
 
 .window {
   z-index: 100;
-  color: #fff;
+  color: rgb(37, 10, 41);
   font-family: roboto;
   position: relative;
   display: -webkit-box;
@@ -173,7 +173,7 @@ button:focus {
   box-sizing: border-box;
   height: 560px;
   width: 360px;
-  background: #fff;
+  background: rgb(26, 4, 23);
   background: url('https://pexels.imgix.net/photos/27718/pexels-photo-27718.jpg?fit=crop&w=1280&h=823') top left no-repeat;
 }
 
@@ -189,7 +189,7 @@ button:focus {
 }
 
 .bold-line {
-  background: #e7e7e7;
+  background: #1f041f;
   position: absolute;
   top: 0px;
   bottom: 0px;
