@@ -27,9 +27,7 @@ function Home() {
     return (
          <Grid style={{background:"#220326",width:"100%",marginLeft:"20px",marginTop:"70px"}}container xs={12} md={12} sm={12} justify="center" alignItems="center" >
 
-            {/* <Grid item xs={10} sm={12} md={12} justify="center" >
-                
-            </Grid> */}
+   
             {data.map((item)=>(
                 // <PokemonCards pid={item.id} pname={item.Name}/>
                 <PokemonCard pid={item.id} pname={item.Name} ptype1={item.Type1} ptype2={item.Type2}
@@ -37,14 +35,7 @@ function Home() {
                 ))}
              
         </Grid>
-        // <Grid container direction="column" md={4} >
-        //     <Grid item>
-        //     {data.map((item)=>(
-        //         // <PokemonCards pid={item.id} pname={item.Name}/>
-        //         <Test2/>
-        //         ))}
-        // </Grid>
-        // </Grid>
+      
     )
 }
 
