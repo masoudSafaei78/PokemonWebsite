@@ -29,12 +29,15 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import WbSunnyIcon from '@material-ui/icons/WbSunny';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 
+
 import Pokemonlogo from '../img/Pokemonlogo.png';
 
-import { fade, Paper } from '@material-ui/core';
+import { ButtonBase, fade, Paper } from '@material-ui/core';
 import Home from './Pages/Home';
 import Pokemon from '../img/Pokemon.png';
 import Pokemon1 from '../img/Pokemon1.png';
+import RouterComponent from './RouterComponent';
+import '../Styles/LinkStyles.css';
 const drawerWidth = 140;
 
 const useStyles = makeStyles((theme) => ({
@@ -117,7 +120,7 @@ const useStyles = makeStyles((theme) => ({
   content: {
     flexGrow: 1,
     // padding: theme.spacing(3),
-    background:"#ff0",
+    // background:"#ff0",
     width:"100%",
     paddingRight:"0px",
     fontSize:"20px"
@@ -151,6 +154,10 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function Layout(props) {
+  
+  const GoProfile = () => {
+    props.history.push('/Profile')
+}
   const { window } = props;
   const classes = useStyles();
   const theme = useTheme();
@@ -171,21 +178,42 @@ function Layout(props) {
       </div>
       <Divider style={{color:theme.palette.secondary.main}}/>
       <List>
-        {['Home', 'Table Appearance',].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>{index % 2 === 0 ? <HomeIcon fontSize="large" style={{color:theme.palette.secondary.main}}/> : <TableChartIcon fontSize="large" style={{color:theme.palette.secondary.main}}/>}</ListItemIcon>
-            <ListItemText primary={text} style={{color:theme.palette.secondary.main}}/>
+      
+        <a  href="/" class="a"> 
+
+          <ListItem button >
+            <ListItemIcon><HomeIcon fontSize="large" style={{color:theme.palette.secondary.main}}/> </ListItemIcon>
+            <ListItemText primary="Home" style={{color:theme.palette.secondary.main}}/>
           </ListItem>
-        ))}
+        </a>
+        <a  href="/TableAppearance" class="a">
+
+          <ListItem button >
+            <ListItemIcon><TableChartIcon fontSize="large" style={{color:theme.palette.secondary.main}}/></ListItemIcon>
+            <ListItemText primary="Table Appearance" style={{color:theme.palette.secondary.main}}/>
+          </ListItem>
+        </a>
+        
       </List>
       <Divider />
       <List>
-        {['Profile', 'Favorites'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>{index % 2 === 0 ? <PersonIcon fontSize="large" style={{color:theme.palette.secondary.main}}/> : <FavoriteIcon fontSize="large" style={{color:theme.palette.secondary.main}}/>}</ListItemIcon >
-            <ListItemText primary={text}  style={{color:theme.palette.secondary.main}}/>
+
+
+            <a href="/Profile" class="a">
+          <ListItem button >
+
+            <ListItemIcon><PersonIcon fontSize="large" style={{color:theme.palette.secondary.main}}/></ListItemIcon >
+            <ListItemText  primary="Profile"  style={{color:theme.palette.secondary.main}}/>
           </ListItem>
-        ))}
+            </a>
+<a  href="/Profile" class="a"> 
+
+          <ListItem button >
+            <ListItemIcon> <FavoriteIcon fontSize="large" style={{color:theme.palette.secondary.main}}/></ListItemIcon >
+            <ListItemText primary="Favorites"  style={{color:theme.palette.secondary.main}}/>
+          </ListItem>
+</a>
+     
       </List>
       <Divider />
       <List>
@@ -238,8 +266,11 @@ function Layout(props) {
             className={classes.Icons}
             
             color="inherit">
+              <a href="https://github.com/masoudSafaei78/PokemonWebsite" class="a" >
+
              
-               <GitHubIcon fontSize="large"/>
+               <GitHubIcon fontSize="large" style={{color:theme.palette.secondary.main}}/>
+              </a>
               
             </IconButton>
             <IconButton 
@@ -301,8 +332,8 @@ function Layout(props) {
       <main className={classes.content}>
      
 
-      
-       <Home />
+      <RouterComponent/>
+       {/* <Home /> */}
         {/* <div className={classes.toolbar} /> */}
         
 
