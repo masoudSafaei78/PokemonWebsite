@@ -217,12 +217,26 @@ function Layout(props) {
       </List>
       <Divider />
       <List>
-        {['About Pokemon', 'Contact Us'].map((text, index) => (
+      <a  href="/About" class="a"> 
+
+<ListItem button >
+  <ListItemIcon> <InfoIcon fontSize="large" style={{color:theme.palette.secondary.main}}/></ListItemIcon >
+  <ListItemText primary="About Pokemon"  style={{color:theme.palette.secondary.main}}/>
+</ListItem>
+</a>
+<a  href="/Contact" class="a"> 
+
+<ListItem button >
+  <ListItemIcon> <MailIcon fontSize="large" style={{color:theme.palette.secondary.main}}/></ListItemIcon >
+  <ListItemText primary="Contact Us"  style={{color:theme.palette.secondary.main}}/>
+</ListItem>
+</a>
+        {/* {['About Pokemon', 'Contact Us'].map((text, index) => (
           <ListItem button key={text}>
             <ListItemIcon>{index % 2 === 0 ? <InfoIcon fontSize="large" style={{color:theme.palette.secondary.main}}/> : <MailIcon fontSize="large" style={{color:theme.palette.secondary.main}}/>}</ListItemIcon >
             <ListItemText primary={text}  style={{color:theme.palette.secondary.main}}/>
           </ListItem>
-        ))}
+        ))} */}
       </List>
     </div>
   );

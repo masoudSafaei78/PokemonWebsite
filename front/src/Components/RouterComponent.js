@@ -5,6 +5,7 @@ import Home from './Pages/Home';
 import Login from './Pages/Login';
 import TableAppearance from './Pages/TableAppearance';
 import Profile from './Pages/Profile';
+import Contact from './Pages/Contact';
 function RouterComponent() {
     return (
         
@@ -13,6 +14,7 @@ function RouterComponent() {
             <Route exact path="/" component={Home}/>
             <Route path="/TableAppearance" component={TableAppearance}/>
             <Route path="/Profile" component={Profile}/>
+            <Route path="/Contact" component={Contact}/>
         
 
             

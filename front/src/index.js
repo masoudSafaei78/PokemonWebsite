@@ -11,18 +11,20 @@ import Profile from './Components/Pages/Profile'
 import EditProfile from './Components/Pages/EditProfile'
 import TableAppearance from './Components/Pages/TableAppearance'
 import RouterComponent from './Components/RouterComponent';
+import Contact from './Components/Pages/Contact'
 
 ReactDOM.render(
   <ThemeProvider theme={theme}>
 
   <React.StrictMode>
-   {/* <App /> */}
-   <Login />
+   <App />
+   {/* <Login /> */}
    {/* <RouterComponent/> */}
    {/* <SignUp /> */}
    {/* <Profile /> */}
    {/* <EditProfile /> */}
    {/* <TableAppearance /> */}
+   {/* <Contact /> */}
   </React.StrictMode>
   </ThemeProvider>,
   document.getElementById('root')
