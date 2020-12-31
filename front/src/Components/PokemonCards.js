@@ -78,7 +78,7 @@ function PokemonCard({ pid, pname, ptype1, ptype2, ptotal, pAttack, pDefense, pS
               <li>Defense:{pDefense}</li>
               <li>Speed:{pSpeed}</li>
          <p/>
-              {pLegendary?<li style={{marginTop:"20px",backgroundColor:"Gold"}}>Legendary</li>:null}
+              {pLegendary==1?<li style={{marginTop:"20px",backgroundColor:"Gold"}}>Legendary</li>:null}
               
             </ul>
           </div>
