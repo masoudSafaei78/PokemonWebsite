@@ -13,6 +13,7 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 
+
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
@@ -47,6 +48,12 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function SignUp() {
+//   let Data = new FormData();
+// Data.append('email', 's@s.com');
+// Data.append('password', 'John123');
+// Data.append('user', 'sasasasasw');
+// Data.append('passwordConf', 'John123');
+
   const classes = useStyles();
 
   return (
@@ -59,13 +66,15 @@ export default function SignUp() {
         <Typography component="h1" variant="h5">
           Sign Up
         </Typography>
-        <form className={classes.form} noValidate>
+        <form className={classes.form} noValidate action="http://localhost/login&register/Registration.php" method="post" >
           <TextField
             variant="outlined"
             margin="normal"
             required
             fullWidth
             id="email"
+            name="email" 
+            // class="form-control"
             label="Email Address"
             name="email"
             autoComplete="email"
@@ -77,6 +86,9 @@ export default function SignUp() {
             required
             fullWidth
             id="username"
+            name="user" 
+            // class="form-control"
+            
             label="User Name"
             name="username"
             autoComplete="username"
@@ -87,9 +99,11 @@ export default function SignUp() {
             margin="normal"
             required
             fullWidth
-            name="password"
+            
             label="Password"
             type="password"
+            name="password" 
+            // class="form-control"
             id="password"
             autoComplete="current-password"
           />
@@ -98,14 +112,26 @@ export default function SignUp() {
             margin="normal"
             required
             fullWidth
-            name="password"
+            
             label="Re-enter Password"
+            name="passwordConf" 
+            // class="form-control"
             type="password"
-            id="password"
+            id="passwordConf"
             autoComplete="current-password"
           />
           <Button
             type="submit"
+            // onClick={()=>{ fetch("http://localhost/login&register/Registration.php", {  
+            //   method: "POST",
+              
+            //   body:Data
+            // }).then(function(response) {
+            //   console.log(response.status);
+            //   return response.json();
+            // }).then(function(data) {
+            //   console.log(data);
+            // } )}}
             fullWidth
             variant="contained"
             color="primary"

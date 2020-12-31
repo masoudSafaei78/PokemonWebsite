@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -154,6 +154,27 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function Layout(props) {
+  function PostData(){
+    fetch("http://localhost/Data_api.php", {  
+              method: "POST",
+              
+              
+            }).then(function(response) {
+              console.log(response.status);
+              // console.log(response.text);
+              return response.json();
+            }).then(function(data) {
+              console.log(data);
+              // setPokemonData(data)
+              localStorage.setItem('PokemonData',JSON.stringify(data))
+            } )
+
+  }
+  useEffect(()=>{
+    PostData();
+    // console.log(P);
+  
+  },[])
   
   const GoProfile = () => {
     props.history.push('/Profile')
