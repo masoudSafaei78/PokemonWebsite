@@ -19,7 +19,7 @@ function Home() {
     //             }).then(function(data) {
     //               console.log(data);
     //               setPokemonData(data)
-    //             //   localStorage.setItem('PokemonData',JSON.stringify(data))
+    //               localStorage.setItem('PokemonData',JSON.stringify(data))
     //             } )
     
     //   }

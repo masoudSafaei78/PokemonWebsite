@@ -327,7 +327,10 @@ function Layout(props) {
               // onClick={handleProfileMenuOpen}
               color="inherit"
             >
-              <AccountCircle fontSize="large"/>
+              <a href = "/login" class = "a">
+              <AccountCircle fontSize="large" style={{color:theme.palette.secondary.main}}/>
+              </a>
+              
             </IconButton>
           </div>
         </Toolbar>
