@@ -6,6 +6,7 @@ import Login from './Pages/Login';
 import TableAppearance from './Pages/TableAppearance';
 import Profile from './Pages/Profile';
 import Contact from './Pages/Contact';
+import About from './Pages/About';
 function RouterComponent() {
     return (
         
@@ -15,6 +16,7 @@ function RouterComponent() {
             <Route path="/TableAppearance" component={TableAppearance}/>
             <Route path="/Profile" component={Profile}/>
             <Route path="/Contact" component={Contact}/>
+            <Route path="/About" component={About}/>
         
 
             
