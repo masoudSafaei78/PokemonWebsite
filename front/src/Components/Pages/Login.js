@@ -41,7 +41,7 @@ export default function Login() {
             id="email"
             label="Email Address"
             name="email"
-            onChange={(e)=>localStorage.setItem('Email',e.target.value)}
+            onChange={(e)=>setEmail(e.target.value)}
             autoComplete="email"
             autoFocus
             
@@ -67,6 +67,7 @@ export default function Login() {
             variant="contained"
             color="primary"
             className={classes.submit}
+            onClick={()=>localStorage.setItem('Email',email)}
           >
             Sign In
           </Button>
