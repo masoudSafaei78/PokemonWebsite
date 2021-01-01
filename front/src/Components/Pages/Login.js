@@ -41,10 +41,10 @@ export default function Login() {
             id="email"
             label="Email Address"
             name="email"
-            onChange={(e)=>setEmail(e.target.value)}
+            onChange={(e) => setEmail(e.target.value)}
             autoComplete="email"
             autoFocus
-            
+
           />
           <TextField
             variant="outlined"
@@ -67,12 +67,12 @@ export default function Login() {
             variant="contained"
             color="primary"
             className={classes.submit}
-            onClick={()=>localStorage.setItem('Email',email)}
+            onClick={() => localStorage.setItem('Email', email)}
           >
             Sign In
           </Button>
           <Grid container>
-        
+
             <Grid item>
               <Link href="/signup" variant="body2">
                 {"Don't have an account? Sign Up"}
@@ -82,7 +82,7 @@ export default function Login() {
         </form>
       </div>
       <Box mt={8}>
-       
+
       </Box>
     </Container>
   );
