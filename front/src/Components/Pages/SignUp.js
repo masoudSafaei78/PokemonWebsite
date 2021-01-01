@@ -20,11 +20,6 @@ import useStyles from "../../Styles/SignUpStyle";
 
 
 export default function SignUp() {
-//   let Data = new FormData();
-// Data.append('email', 's@s.com');
-// Data.append('password', 'John123');
-// Data.append('user', 'sasasasasw');
-// Data.append('passwordConf', 'John123');
 
   const classes = useStyles();
 
@@ -46,7 +41,6 @@ export default function SignUp() {
             fullWidth
             id="email"
             name="email" 
-            // class="form-control"
             label="Email Address"
             name="email"
             autoComplete="email"
@@ -59,7 +53,6 @@ export default function SignUp() {
             fullWidth
             id="username"
             name="user" 
-            // class="form-control"
             
             label="User Name"
             name="username"
@@ -75,7 +68,6 @@ export default function SignUp() {
             label="Password"
             type="password"
             name="password" 
-            // class="form-control"
             id="password"
             autoComplete="current-password"
           />
@@ -87,23 +79,12 @@ export default function SignUp() {
             
             label="Re-enter Password"
             name="passwordConf" 
-            // class="form-control"
             type="password"
             id="passwordConf"
             autoComplete="current-password"
           />
           <Button
             type="submit"
-            // onClick={()=>{ fetch("http://localhost/login&register/Registration.php", {  
-            //   method: "POST",
-              
-            //   body:Data
-            // }).then(function(response) {
-            //   console.log(response.status);
-            //   return response.json();
-            // }).then(function(data) {
-            //   console.log(data);
-            // } )}}
             fullWidth
             variant="contained"
             color="primary"
