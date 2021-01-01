@@ -9,11 +9,10 @@ import CloseIcon from '@material-ui/icons/Close';
 import Button from '@material-ui/core/Button';
 
 function Alert(props) {
-  return <MuiAlert style={{fontSize:'40px',height:"40px"}} elevation={8} variant="filled" {...props} />;
+  return <MuiAlert style={{ fontSize: '40px', height: "40px" }} elevation={8} variant="filled" {...props} />;
 }
 function PokemonCard({ pid, pname, ptype1, ptype2, ptotal, pAttack, pDefense, pSpeed, pLegendary }) {
   const [open, setOpen] = React.useState(false);
-  // const legen
   const handleClick = () => {
     setOpen(true);
   };
@@ -27,36 +26,15 @@ function PokemonCard({ pid, pname, ptype1, ptype2, ptotal, pAttack, pDefense, pS
   };
   return (
     <div class="artboard" onClick={handleClick}>
-      {open? <Snackbar bodyStyle={{ backgroundColor: 'teal', color: 'coral' }} open={open} autoHideDuration={4000} onClose={handleClose}>
-        <Alert  onClose={handleClose} severity="success">
-          <text style={{fontSize:"15px"}}> Added to favorites</text>
-         
-        </Alert>
-      </Snackbar>:null}
-      
-      {/* <Snackbar
-      style={{}}
-        anchorOrigin={{
-          vertical: 'bottom',
-          horizontal: 'left',
+      {open ? <Snackbar bodyStyle={{ backgroundColor: 'teal', color: 'coral' }} open={open} autoHideDuration={4000} onClose={handleClose}>
+        <Alert onClose={handleClose} severity="success">
+          <text style={{ fontSize: "15px" }}> Added to favorites</text>
 
-        }}
-        open={open}
-        autoHideDuration={6000}
-        onClose={handleClose}
-        style={{ fontSize: "5rem" }}
-        message="Added to favorits"
-        action={
-          <React.Fragment>
-            <Button color="secondary" size="large" onClick={handleClose} style={{ fontSize: "13px" }}>
-              UNDO
-            </Button>
-            <IconButton size="large" aria-label="close" color="inherit" onClick={handleClose}>
-              <CloseIcon fontSize="large" />
-            </IconButton>
-          </React.Fragment> */}
-        {/* }
-      /> */}
+        </Alert>
+      </Snackbar> : null}
+
+      {}
+      {}
       <div class="card">
 
         <div class="card__side card__side--back">
@@ -69,17 +47,17 @@ function PokemonCard({ pid, pname, ptype1, ptype2, ptotal, pAttack, pDefense, pS
             <ul>
 
               <li>Types:
-              {ptype2!=null?<p>{ptype1},{ptype2}</p>:<p>{ptype1}</p>}
-              
-              {/* <p>{ptype1},{ptype2}</p>  */}
+              {ptype2 != null ? <p>{ptype1},{ptype2}</p> : <p>{ptype1}</p>}
+
+                { }
               </li>
               <li>Total:{ptotal}</li>
               <li>Attack:{pAttack}</li>
               <li>Defense:{pDefense}</li>
               <li>Speed:{pSpeed}</li>
-         <p/>
-              {pLegendary==1?<li style={{marginTop:"20px",backgroundColor:"Gold"}}>Legendary</li>:null}
-              
+              <p />
+              {pLegendary == 1 ? <li style={{ marginTop: "20px", backgroundColor: "Gold" }}>Legendary</li> : null}
+
             </ul>
           </div>
         </div>
@@ -90,14 +68,9 @@ function PokemonCard({ pid, pname, ptype1, ptype2, ptotal, pAttack, pDefense, pS
               <p class="card__subject">Bowerlas</p>
               <p class="card__subject">{pid}</p>
               <p class="card__title">{pname}</p>
-              {/* <p><FavoriteIcon fontSize="large"/></p> */}
+              { }
             </div>
-            {/* <div style={{float:"left"}}>
-            <ButtonBase>
-          <FavoriteIcon fontSize="large"/>
-
-            </ButtonBase>
-           </div> */}
+            { }
           </div>
         </div>
 
