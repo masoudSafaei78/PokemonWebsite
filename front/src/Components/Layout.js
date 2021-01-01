@@ -220,7 +220,7 @@ function Layout(props) {
       <List>
 
 
-            <a href="/Profile" class="a">
+            <a href={localStorage.getItem("Email")==null?"/Login":"/Profile"} class="a">
           <ListItem button >
 
             <ListItemIcon><PersonIcon fontSize="large" style={{color:theme.palette.secondary.main}}/></ListItemIcon >
@@ -327,7 +327,7 @@ function Layout(props) {
               // onClick={handleProfileMenuOpen}
               color="inherit"
             >
-              <a href = "/login" class = "a">
+              <a href ={localStorage.getItem("Email")==null?"/Login":"/Profile"}  class = "a">
               <AccountCircle fontSize="large" style={{color:theme.palette.secondary.main}}/>
               </a>
               
