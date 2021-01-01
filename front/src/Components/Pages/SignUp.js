@@ -40,7 +40,7 @@ export default function SignUp() {
             required
             fullWidth
             id="email"
-            name="email" 
+            name="email"
             label="Email Address"
             name="email"
             autoComplete="email"
@@ -52,8 +52,8 @@ export default function SignUp() {
             required
             fullWidth
             id="username"
-            name="user" 
-            
+            name="user"
+
             label="User Name"
             name="username"
             autoComplete="username"
@@ -64,10 +64,10 @@ export default function SignUp() {
             margin="normal"
             required
             fullWidth
-            
+
             label="Password"
             type="password"
-            name="password" 
+            name="password"
             id="password"
             autoComplete="current-password"
           />
@@ -76,9 +76,9 @@ export default function SignUp() {
             margin="normal"
             required
             fullWidth
-            
+
             label="Re-enter Password"
-            name="passwordConf" 
+            name="passwordConf"
             type="password"
             id="passwordConf"
             autoComplete="current-password"
@@ -94,17 +94,17 @@ export default function SignUp() {
           </Button>
           <Grid container>
             <Grid item xs>
-              
+
             </Grid>
             <Grid item>
-            <Link href="/login" variant="body2">
+              <Link href="/login" variant="body2">
                 {"Have an account? Log In"}
               </Link>
             </Grid>
           </Grid>
         </form>
       </div>
-   
+
     </Container>
   );
 }
