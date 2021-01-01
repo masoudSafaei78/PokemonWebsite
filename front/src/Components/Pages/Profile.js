@@ -49,6 +49,8 @@ export default function Profile() {
         </Grid>
             
         </Grid>
+        <a href="/"> 
+
         <Button
             type="submit"
             fullWidth
@@ -56,9 +58,10 @@ export default function Profile() {
             color="primary"
             className={classes.submit}
             onClick = {()=> localStorage.removeItem('Email')}
-          >
+            >
              Log Out
           </Button>
+            </a>
 
        
         {/* <form className={classes.form} noValidate>
