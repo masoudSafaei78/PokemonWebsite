@@ -23,7 +23,7 @@ export default function Header() {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
-  const [darkmode,setDarkMode]=useState(false);
+  const [darkmode, setDarkMode] = useState(false);
 
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
@@ -48,7 +48,7 @@ export default function Header() {
   const menuId = 'primary-search-account-menu';
   const renderMenu = (
     <Menu
-      style={{paddingTop:"0px"}}
+      style={{ paddingTop: "0px" }}
       anchorEl={anchorEl}
       // anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
       id={menuId}
@@ -57,8 +57,8 @@ export default function Header() {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem style={{backgroundColor:"#000",paddingTop:"0px"}} className={classes.LoginIcon,classes.title} onClick={handleMenuClose}>Profile</MenuItem>
-      <MenuItem style={{backgroundColor:"#000"}} className={classes.title} onClick={handleMenuClose}>My account</MenuItem>
+      <MenuItem style={{ backgroundColor: "#000", paddingTop: "0px" }} className={classes.LoginIcon, classes.title} onClick={handleMenuClose}>Profile</MenuItem>
+      <MenuItem style={{ backgroundColor: "#000" }} className={classes.title} onClick={handleMenuClose}>My account</MenuItem>
     </Menu>
   );
 
@@ -75,14 +75,14 @@ export default function Header() {
     >
       <MenuItem>
         <IconButton aria-label="show 4 new mails" color="inherit">
-          
-            <Brightness2Icon />
-         
+
+          <Brightness2Icon />
+
         </IconButton>
         <p>Change Theme</p>
-        
+
       </MenuItem>
-     
+
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
           aria-label="account of current user"
@@ -99,9 +99,9 @@ export default function Header() {
 
   return (
     // <div className={classes.grow}>
-      <AppBar position="sticky">
-        <Toolbar>
-          {/* <IconButton
+    <AppBar position="sticky">
+      <Toolbar>
+        {/* <IconButton
             edge="start"
             className={classes.menuButton}
             color="inherit"
@@ -109,60 +109,60 @@ export default function Header() {
           >
             <MenuIcon />
           </IconButton> */}
-          <Typography className={classes.title} variant="h6" noWrap>
-            Pokemon
+        <Typography className={classes.title} variant="h6" noWrap>
+          Pokemon
           </Typography>
-          <div className={classes.search}>
-            <div className={classes.searchIcon}>
-              <SearchIcon />
-            </div>
-            <InputBase
-              placeholder="Search…"
-              classes={{
-                root: classes.inputRoot,
-                input: classes.inputInput,
-              }}
-              inputProps={{ 'aria-label': 'search' }}
-            />
+        <div className={classes.search}>
+          <div className={classes.searchIcon}>
+            <SearchIcon />
           </div>
-          <div className={classes.grow} />
-          <div className={classes.sectionDesktop}>
-            {/* <IconButton aria-label="show 4 new mails" color="inherit">
+          <InputBase
+            placeholder="Search…"
+            classes={{
+              root: classes.inputRoot,
+              input: classes.inputInput,
+            }}
+            inputProps={{ 'aria-label': 'search' }}
+          />
+        </div>
+        <div className={classes.grow} />
+        <div className={classes.sectionDesktop}>
+          {/* <IconButton aria-label="show 4 new mails" color="inherit">
               <Badge badgeContent={4} color="secondary">
                 <MailIcon />
               </Badge>
             </IconButton> */}
-            <IconButton 
+          <IconButton
             className={classes.Icons}
-            
-            color="inherit">
-             
-               <GitHubIcon/>
-              
-            </IconButton>
-            <IconButton 
-             className={classes.Icons}
 
-            onClick={()=>setDarkMode(!darkmode)}
-             
-             color="inherit">
-             
-               {darkmode?<Brightness2Icon/>:<WbSunnyIcon/>}
-              
-            </IconButton>
-            <IconButton
-             className={classes.Icons}
-              edge="end"
-              aria-label="account of current user"
-              aria-controls={menuId}
-              aria-haspopup="true"
-              onClick={handleProfileMenuOpen}
-              color="inherit"
-            >
-              <AccountCircle />
-            </IconButton>
-          </div>
-          {/* <div className={classes.sectionMobile}>
+            color="inherit">
+
+            <GitHubIcon />
+
+          </IconButton>
+          <IconButton
+            className={classes.Icons}
+
+            onClick={() => setDarkMode(!darkmode)}
+
+            color="inherit">
+
+            {darkmode ? <Brightness2Icon /> : <WbSunnyIcon />}
+
+          </IconButton>
+          <IconButton
+            className={classes.Icons}
+            edge="end"
+            aria-label="account of current user"
+            aria-controls={menuId}
+            aria-haspopup="true"
+            onClick={handleProfileMenuOpen}
+            color="inherit"
+          >
+            <AccountCircle />
+          </IconButton>
+        </div>
+        {/* <div className={classes.sectionMobile}>
             <IconButton
              className={classes.Icons}
               aria-label="show more"
@@ -174,10 +174,10 @@ export default function Header() {
               <MoreIcon  className={classes.Icons} />
             </IconButton>
           </div> */}
-        </Toolbar>
-      </AppBar>
-      // {renderMobileMenu}
-      // {renderMenu}
+      </Toolbar>
+    </AppBar>
+    // {renderMobileMenu}
+    // {renderMenu}
     // </div>
   );
 }

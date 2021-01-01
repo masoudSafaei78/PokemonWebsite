@@ -47,8 +47,8 @@ const useStyles = makeStyles((theme) => ({
   grow: {
     flexGrow: 1,
     // height:"10vh",
-    color:theme.palette.primary.main,
-    
+    color: theme.palette.primary.main,
+
   },
   drawer: {
     [theme.breakpoints.up('sm')]: {
@@ -58,26 +58,26 @@ const useStyles = makeStyles((theme) => ({
   },
   appBar: {
     [theme.breakpoints.up('sm')]: {
-      width:`calc(100% - ${drawerWidth}px)`,
+      width: `calc(100% - ${drawerWidth}px)`,
       marginLeft: drawerWidth,
-      height:"70px"
+      height: "70px"
     },
   },
   search: {
     position: 'relative',
     borderRadius: theme.shape.borderRadius,
-    display:'flex',
+    display: 'flex',
     backgroundColor: fade(theme.palette.common.white, 0.15),
     '&:hover': {
       backgroundColor: fade(theme.palette.common.white, 0.25),
     },
     marginRight: theme.spacing(2),
-    
+
     width: '100%',
     [theme.breakpoints.up('sm')]: {
       marginLeft: theme.spacing(16),
       width: '220px',
-      height:'30px'
+      height: '30px'
     },
   },
   searchIcon: {
@@ -91,7 +91,7 @@ const useStyles = makeStyles((theme) => ({
   },
   inputRoot: {
     color: 'inherit',
-    fontSize:'15px'
+    fontSize: '15px'
   },
   inputInput: {
     padding: theme.spacing(1, 1, 1, 0),
@@ -113,77 +113,77 @@ const useStyles = makeStyles((theme) => ({
   toolbar: theme.mixins.toolbar,
   drawerPaper: {
     // width: drawerWidth,
-    backgroundColor:theme.palette.primary.main,
-    
-    
+    backgroundColor: theme.palette.primary.main,
+
+
   },
   content: {
     flexGrow: 1,
     // padding: theme.spacing(3),
     // background:"#ff0",
-    width:"100%",
-    paddingRight:"0px",
-    fontSize:"20px"
+    width: "100%",
+    paddingRight: "0px",
+    fontSize: "20px"
   },
-//   toolbarlogo:{
-//     height:"70px",
-//     width:"100%",
-//     backgroundColor:theme.palette.primary.main
-//   },
-  logo:{
+  //   toolbarlogo:{
+  //     height:"70px",
+  //     width:"100%",
+  //     backgroundColor:theme.palette.primary.main
+  //   },
+  logo: {
     // backgroundImage:`url(${Pokemonlogo})`,
-    backgroundImage:`url(${Pokemon1})`,
+    backgroundImage: `url(${Pokemon1})`,
     // backgroundPosition:"center",
     // marginBottom:"110px",
-    backgroundOrigin:"content-box",
-    backgroundSize:"contain",
-    backgroundColor:theme.palette.primary.main,
-    backgroundRepeat:"no-repeat",
-    height:"70px",
-    width:240,
-    boxShadow:"none",
+    backgroundOrigin: "content-box",
+    backgroundSize: "contain",
+    backgroundColor: theme.palette.primary.main,
+    backgroundRepeat: "no-repeat",
+    height: "70px",
+    width: 240,
+    boxShadow: "none",
   },
   sectionDesktop: {
     display: 'none',
-    color:theme.palette.secondary.main,
+    color: theme.palette.secondary.main,
     [theme.breakpoints.up('md')]: {
       display: 'flex',
-      
+
     },
   },
 }));
 
 function Layout(props) {
-  function PostData(){
-    fetch("http://localhost/Data_api.php", {  
-              method: "POST",
-              
-              
-            }).then(function(response) {
-              console.log(response.status);
-              // console.log(response.text);
-              return response.json();
-            }).then(function(data) {
-              console.log(data);
-              // setPokemonData(data)
-              localStorage.setItem('PokemonData',JSON.stringify(data))
-            } )
+  function PostData() {
+    fetch("http://localhost/Data_api.php", {
+      method: "POST",
+
+
+    }).then(function (response) {
+      console.log(response.status);
+      // console.log(response.text);
+      return response.json();
+    }).then(function (data) {
+      console.log(data);
+      // setPokemonData(data)
+      localStorage.setItem('PokemonData', JSON.stringify(data))
+    })
 
   }
-  useEffect(()=>{
+  useEffect(() => {
     PostData();
     // console.log(P);
-  
-  },[])
-  
+
+  }, [])
+
   const GoProfile = () => {
     props.history.push('/Profile')
-}
+  }
   const { window } = props;
   const classes = useStyles();
   const theme = useTheme();
   const [mobileOpen, setMobileOpen] = React.useState(false);
-  const [darkmode,setDarkMode]=useState(false);
+  const [darkmode, setDarkMode] = useState(false);
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -192,66 +192,66 @@ function Layout(props) {
   const drawer = (
     <div>
       <div className={classes.toolbar} >
-          {/* <div className={classes.toolbarlogo}> */}
-          <Paper className={classes.logo}/>
+        {/* <div className={classes.toolbarlogo}> */}
+        <Paper className={classes.logo} />
 
-          {/* </div> */}
+        {/* </div> */}
       </div>
-      <Divider style={{color:theme.palette.secondary.main}}/>
+      <Divider style={{ color: theme.palette.secondary.main }} />
       <List>
-      
-        <a  href="/" class="a"> 
+
+        <a href="/" class="a">
 
           <ListItem button >
-            <ListItemIcon><HomeIcon fontSize="large" style={{color:theme.palette.secondary.main}}/> </ListItemIcon>
-            <ListItemText primary="Home" style={{color:theme.palette.secondary.main}}/>
+            <ListItemIcon><HomeIcon fontSize="large" style={{ color: theme.palette.secondary.main }} /> </ListItemIcon>
+            <ListItemText primary="Home" style={{ color: theme.palette.secondary.main }} />
           </ListItem>
         </a>
-        <a  href="/TableAppearance" class="a">
+        <a href="/TableAppearance" class="a">
 
           <ListItem button >
-            <ListItemIcon><TableChartIcon fontSize="large" style={{color:theme.palette.secondary.main}}/></ListItemIcon>
-            <ListItemText primary="Table Appearance" style={{color:theme.palette.secondary.main}}/>
+            <ListItemIcon><TableChartIcon fontSize="large" style={{ color: theme.palette.secondary.main }} /></ListItemIcon>
+            <ListItemText primary="Table Appearance" style={{ color: theme.palette.secondary.main }} />
           </ListItem>
         </a>
-        
+
       </List>
       <Divider />
       <List>
 
 
-            <a href={localStorage.getItem("Email")==null?"/Login":"/Profile"} class="a">
+        <a href={localStorage.getItem("Email") == null ? "/Login" : "/Profile"} class="a">
           <ListItem button >
 
-            <ListItemIcon><PersonIcon fontSize="large" style={{color:theme.palette.secondary.main}}/></ListItemIcon >
-            <ListItemText  primary="Profile"  style={{color:theme.palette.secondary.main}}/>
+            <ListItemIcon><PersonIcon fontSize="large" style={{ color: theme.palette.secondary.main }} /></ListItemIcon >
+            <ListItemText primary="Profile" style={{ color: theme.palette.secondary.main }} />
           </ListItem>
-            </a>
-<a  href="/Profile" class="a"> 
+        </a>
+        <a href="/Profile" class="a">
 
           <ListItem button >
-            <ListItemIcon> <FavoriteIcon fontSize="large" style={{color:theme.palette.secondary.main}}/></ListItemIcon >
-            <ListItemText primary="Favorites"  style={{color:theme.palette.secondary.main}}/>
+            <ListItemIcon> <FavoriteIcon fontSize="large" style={{ color: theme.palette.secondary.main }} /></ListItemIcon >
+            <ListItemText primary="Favorites" style={{ color: theme.palette.secondary.main }} />
           </ListItem>
-</a>
-     
+        </a>
+
       </List>
       <Divider />
       <List>
-      <a  href="/About" class="a"> 
+        <a href="/About" class="a">
 
-<ListItem button >
-  <ListItemIcon> <InfoIcon fontSize="large" style={{color:theme.palette.secondary.main}}/></ListItemIcon >
-  <ListItemText primary="About Pokemon"  style={{color:theme.palette.secondary.main}}/>
-</ListItem>
-</a>
-<a  href="/Contact" class="a"> 
+          <ListItem button >
+            <ListItemIcon> <InfoIcon fontSize="large" style={{ color: theme.palette.secondary.main }} /></ListItemIcon >
+            <ListItemText primary="About Pokemon" style={{ color: theme.palette.secondary.main }} />
+          </ListItem>
+        </a>
+        <a href="/Contact" class="a">
 
-<ListItem button >
-  <ListItemIcon> <MailIcon fontSize="large" style={{color:theme.palette.secondary.main}}/></ListItemIcon >
-  <ListItemText primary="Contact Us"  style={{color:theme.palette.secondary.main}}/>
-</ListItem>
-</a>
+          <ListItem button >
+            <ListItemIcon> <MailIcon fontSize="large" style={{ color: theme.palette.secondary.main }} /></ListItemIcon >
+            <ListItemText primary="Contact Us" style={{ color: theme.palette.secondary.main }} />
+          </ListItem>
+        </a>
         {/* {['About Pokemon', 'Contact Us'].map((text, index) => (
           <ListItem button key={text}>
             <ListItemIcon>{index % 2 === 0 ? <InfoIcon fontSize="large" style={{color:theme.palette.secondary.main}}/> : <MailIcon fontSize="large" style={{color:theme.palette.secondary.main}}/>}</ListItemIcon >
@@ -297,29 +297,29 @@ function Layout(props) {
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
 
-          <IconButton 
-            className={classes.Icons}
-            
-            color="inherit">
+            <IconButton
+              className={classes.Icons}
+
+              color="inherit">
               <a href="https://github.com/masoudSafaei78/PokemonWebsite" class="a" >
 
-             
-               <GitHubIcon fontSize="large" style={{color:theme.palette.secondary.main}}/>
-              </a>
-              
-            </IconButton>
-            <IconButton 
-             className={classes.Icons}
 
-            onClick={()=>setDarkMode(!darkmode)}
-             
-             color="inherit">
-             
-               {darkmode?<Brightness2Icon fontSize="large"/>:<WbSunnyIcon fontSize="large"/>}
-              
+                <GitHubIcon fontSize="large" style={{ color: theme.palette.secondary.main }} />
+              </a>
+
             </IconButton>
             <IconButton
-             className={classes.Icons}
+              className={classes.Icons}
+
+              onClick={() => setDarkMode(!darkmode)}
+
+              color="inherit">
+
+              {darkmode ? <Brightness2Icon fontSize="large" /> : <WbSunnyIcon fontSize="large" />}
+
+            </IconButton>
+            <IconButton
+              className={classes.Icons}
               edge="end"
               aria-label="account of current user"
               // aria-controls={menuId}
@@ -327,15 +327,15 @@ function Layout(props) {
               // onClick={handleProfileMenuOpen}
               color="inherit"
             >
-              <a href ={localStorage.getItem("Email")==null?"/Login":"/Profile"}  class = "a">
-              <AccountCircle fontSize="large" style={{color:theme.palette.secondary.main}}/>
+              <a href={localStorage.getItem("Email") == null ? "/Login" : "/Profile"} class="a">
+                <AccountCircle fontSize="large" style={{ color: theme.palette.secondary.main }} />
               </a>
-              
+
             </IconButton>
           </div>
         </Toolbar>
       </AppBar>
-        <Toolbar/>
+      <Toolbar />
       <nav className={classes.drawer} aria-label="mailbox folders">
         {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
         <Hidden smUp implementation="css">
@@ -368,14 +368,14 @@ function Layout(props) {
         </Hidden>
       </nav>
       <main className={classes.content}>
-     
 
-      <RouterComponent/>
-       {/* <Home /> */}
+
+        <RouterComponent />
+        {/* <Home /> */}
         {/* <div className={classes.toolbar} /> */}
-        
 
-      
+
+
       </main>
     </div>
   );

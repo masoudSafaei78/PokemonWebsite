@@ -28,7 +28,7 @@ export default function LeftSideBar() {
     
         </Toolbar> */}
       </Header>
-     
+
       <Drawer
         // className={classes.drawer}
         variant="permanent"
@@ -58,9 +58,9 @@ export default function LeftSideBar() {
         </List>
       </Drawer>
       <main >
-        <div  />
-  
-   
+        <div />
+
+
       </main>
     </div>
   );
