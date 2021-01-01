@@ -20,7 +20,7 @@ import useStyles from "../../Styles/ProfileStyle"
 
 
 export default function Profile() {
-  const Email= (localStorage.getItem('Email')) ;
+  const Email = (localStorage.getItem('Email'));
   console.log(Email);
   const classes = useStyles();
 
@@ -34,66 +34,39 @@ export default function Profile() {
         <Typography component="h1" variant="h5" className={classes.Profile}>
           Profile
         </Typography>
-        <Grid container direction="row" justify="space-around" alignItems="center" style={{marginTop:"20px"}}> 
-        <Grid item >
-        <Typography className={classes.Typography}>
-          Your Email : 
+        <Grid container direction="row" justify="space-around" alignItems="center" style={{ marginTop: "20px" }}>
+          <Grid item >
+            <Typography className={classes.Typography}>
+              Your Email :
         </Typography>
 
-        </Grid>
-        <Grid item style={{left:"0px"}} >
-        <Typography className={classes.Typography}>
-          {Email}
-        </Typography>
-
-        </Grid>
-            
-        </Grid>
-        <a href="/"> 
-
-        <Button
-            type="submit"
-            fullWidth
-            variant="contained"
-            color="primary"
-            className={classes.submit}
-            onClick = {()=> localStorage.removeItem('Email')}
-            >
-             Log Out
-          </Button>
-            </a>
-
-       
-        {/* <form className={classes.form} noValidate>
-            
-          <Button
-            type="submit"
-            fullWidth
-            variant="contained"
-            color="primary"
-            className={classes.submit}
-          >
-             Edit Profile
-          </Button>
-          <Button
-            type="submit"
-            fullWidth
-            variant="contained"
-            color="primary"
-            className={classes.submit}
-          >
-             Change Password
-          </Button>
-          <Grid container>
-            <Grid item xs>
-              
-            </Grid>
-            <Grid item>
-            </Grid>
           </Grid>
-        </form> */}
+          <Grid item style={{ left: "0px" }} >
+            <Typography className={classes.Typography}>
+              {Email}
+            </Typography>
+
+          </Grid>
+
+        </Grid>
+        <a href="/">
+
+          <Button
+            type="submit"
+            fullWidth
+            variant="contained"
+            color="primary"
+            className={classes.submit}
+            onClick={() => localStorage.removeItem('Email')}
+          >
+            Log Out
+          </Button>
+        </a>
+
+
+        { }
       </div>
-    
+
     </Container>
   );
 }
