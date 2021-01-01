@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -19,6 +19,7 @@ import useStyles from '../../Styles/LoginStyle';
 
 
 export default function Login() {
+  const [email, setEmail] = useState('')
   const classes = useStyles();
 
   return (
@@ -31,7 +32,7 @@ export default function Login() {
         <Typography component="h1" variant="h5">
           Sign in
         </Typography>
-        <form className={classes.form} noValidate>
+        <form className={classes.form} noValidate action="http://localhost/login&register/validation.php" method="post">
           <TextField
             variant="outlined"
             margin="normal"
@@ -40,8 +41,10 @@ export default function Login() {
             id="email"
             label="Email Address"
             name="email"
+            onChange={(e)=>localStorage.setItem('Email',e.target.value)}
             autoComplete="email"
             autoFocus
+            
           />
           <TextField
             variant="outlined"
@@ -68,11 +71,7 @@ export default function Login() {
             Sign In
           </Button>
           <Grid container>
-            <Grid item xs>
-              <Link href="#" variant="body2">
-                Forgot password?
-              </Link>
-            </Grid>
+        
             <Grid item>
               <Link href="/signup" variant="body2">
                 {"Don't have an account? Sign Up"}
