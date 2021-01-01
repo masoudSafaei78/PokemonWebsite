@@ -14,6 +14,7 @@ function Home() {
             {PokemonData.map((item) => (
                 <PokemonCard pid={item.id} pname={item.Name} ptype1={item.Type1} ptype2={item.Type2}
                     ptotal={item.Total} pAttack={item.Attack} pDefense={item.Defense} pSpeed={item.Speed} pLegendary={item.Legendary} />
+
             ))}
 
         </Grid>
