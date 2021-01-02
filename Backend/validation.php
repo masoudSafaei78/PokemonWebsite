@@ -12,13 +12,13 @@ $result = mysqli_query($con , $s);
 
 if($num==1){
 	$_SESSION['email'] = $email;/// seccussfull
-	//header('location:home.php');
+	header('location:http://localhost:3000');
 	echo json_encode(["Status"=>200]);
 	}
 	else{
 
 	echo json_encode(["Status"=>400]);
-	header('location:login.php');
+	header('location:http://localhost:3000/login');
  
 		} 
 ?>
