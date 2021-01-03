@@ -3,9 +3,9 @@
 
 The basis of this project is created and written based on ReactJs.
 
-In addition Html,css and scss are also used for frontend.
+Html,css and scss are also used for frontend.
 
-also we used Material UI for UI Designing. 
+We also used Material UI for UI Designing. 
 
 ## Getting started
 To get the frontend running locally:
@@ -16,12 +16,12 @@ To get the frontend running locally:
 
 ## API Services
 
-**We used PHP and MySQL to write the Api. At the beginning of each code we connect to our database called 'pokemon'**
+**To write the Api We used PHP and MySQL. At the beginning of each code we connect to our database called 'pokemon'**
 - Sign UP API
     - The **Registration.php** file is for **registration**. We will receive your email, username, password and password confirmation.
     - Then we have to do the necessary research in database. We compare the email that the user enters with the emails in the 'usertable' table of our database
     
-      **if** it is the same, the **status** of **300** is returned. 
+      **if** it is the same, the **status** of **300** will be returned. 
       
       **if** the email is in standard format **status** of **400** will be returned.
       
@@ -38,17 +38,17 @@ To get the frontend running locally:
     
     - First we receive the email and password that the user enters. In the database and in the 'usertable' table, we check whether this email and password exist.
     
-      **if** there is, the user enters and is directed to the main page of the site. Otherwise **status 400** is reported and the user is redirected to the login page.
+      **if** there is, the user enters and will directed to the main page of the site. Otherwise **status 400** is reported and the user will redirected to the login page.
       
       
 - Pokemon Data API
-    - The **Data_api.php** file is for displaying Pokemon card information.
+    - The **Data_api.php** file is for displaying Pokemon card informations.
     
     - First we select all the rows in the **'pokemondata' table** and check the number of rows in it.
     
        **if** this number was zero and there was no row in the table, we return the **status 500**, which means the table is empty. **if** the table is not empty, we return the rows of the table in an array as Json.
        
-- **Axios** have been used to call the Api mentioned above.
+- **Axios** is used to call the Api mentioned above.
 - You can Test Api(s) by using Postman.
     
 
