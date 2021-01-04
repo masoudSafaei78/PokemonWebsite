@@ -60,6 +60,7 @@ const useStyles = makeStyles({
 
 export default function CustomizedTables() {
   const classes = useStyles();
+  const PokemonData = JSON.parse(localStorage.getItem('PokemonData'));
 
   return (
     <Grid style={{ background: "#220326", width: "100%", marginLeft: "50px", marginTop: "70px" }} container xs={12} md={12} sm={12} justify="center" alignItems="center" >
@@ -79,7 +80,7 @@ export default function CustomizedTables() {
             </TableRow>
           </TableHead>
           <TableBody>
-            {data.map((row) => (
+            {PokemonData.map((row) => (
 
               <StyledTableRow key={row.name}>
                 <StyledTableCell align="center">{row.id}</StyledTableCell>

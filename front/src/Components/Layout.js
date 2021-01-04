@@ -227,13 +227,13 @@ function Layout(props) {
             <ListItemText primary="Profile" style={{ color: theme.palette.secondary.main }} />
           </ListItem>
         </a>
-        <a href="/Profile" class="a">
+        {/* <a href="/Profile" class="a"> */}
 
           <ListItem button >
             <ListItemIcon> <FavoriteIcon fontSize="large" style={{ color: theme.palette.secondary.main }} /></ListItemIcon >
             <ListItemText primary="Favorites" style={{ color: theme.palette.secondary.main }} />
           </ListItem>
-        </a>
+        {/* </a> */}
 
       </List>
       <Divider />
